@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>Furry 介绍 | 404</title>
+    <link rel="icon" href="favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/SharpIce.css">
+    <style>
+        body {
+            background-color: mediumseagreen;
+        }
+
+        #container {
+            top: 50%;
+            left: 50%;
+            display: flex;
+            position: fixed;
+            transform: translate(-50%, -50%);
+        }
+
+        #container * {
+            margin: auto 1rem;
+        }
+
+        vl::before {
+            top: 50%;
+            height: 10rem;
+            min-width: 2px;
+            animation: VerticalAnimation 1s;
+            background-color: black;
+            transform: translate(0, -50%);
+        }
+
+        @keyframes VerticalAnimation {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 10rem;
+            }
+        }
+
+        /* https://github.com/kobe-koto/kobe-koto.github.io/blob/main/static/css/main.css */
+        @keyframes TextAnimationLeft {
+            0% {
+                opacity: 0;
+                transform: translate(-1rem)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0)
+            }
+        }
+
+        @keyframes TextAnimationRight {
+            0% {
+                opacity: 0;
+                transform: translate(1rem)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="container">
+        <strong style="animation: TextAnimationLeft 1s;">似乎来到了一个奇怪的地方</strong>
+        <vl></vl>
+        <strong style="animation: TextAnimationRight 1s;">404 ！</strong>
+    </main>
+</body>
+
+</html>

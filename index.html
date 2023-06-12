@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>Furry 介绍 | 主页</title>
+    <base target="_blank">
+    <meta name="description" content="SharpIce 的个人站点" />
+    <meta name="keywords" content="Furry" />
+    <meta name="copyright" content="SharpIce © ALL">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//cdn.staticfile.org" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Serif">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC">
+    <link rel="stylesheet" type="text/css" href="css/Global.css">
+    <link rel="stylesheet" type="text/css" href="css/Animation.css">
+    <link rel="stylesheet" type="text/css" href="css/SharpIce.css">
+    <link rel="stylesheet" type="text/css" href="css/post.css">
+    <link rel="stylesheet" type="text/css" href="css/Layout/All/NavigationBar.css">
+    <link rel="stylesheet" type="text/css" href="css/Layout/All/Content.css">
+    <link rel="stylesheet" type="text/css" href="css/Layout/All/BottomBar.css">
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js" module></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/showdown/2.1.0/showdown.min.js" module></script>
+    <script type="text/javascript" src="js/SharpIce.js" module></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header id="NavigationBar">
+        <p class="Title">
+            Furry
+            <span>介绍</span>
+        </p>
+        <nav>
+            <a class="ButtonStyle" href="#">
+                <i class="Icon fa-solid fa-paw"></i>
+                首页
+            </a>
+            <a class="ButtonStyle" href="#">
+                <i class="fa fa-seedling"></i>
+                其他介绍
+            </a>
+            <a class="ButtonStyle" href="#">
+                <i class="fa-solid fa-comments"></i>
+                相关活动
+            </a>
+            <a class="ButtonStyle" href="#">
+                <i class="fa fa-link"></i>
+                相关链接
+            </a>
+            <a class="ButtonStyle" href="#">
+                <i class="Icon fa-solid fa-heart"></i>
+                关于
+            </a>
+        </nav>
+    </header>
+    <div id="Content">
+        <aside class="LeftBar card">
+            <p class="Title">文章导航</p>
+        </aside>
+        <main id="Main">
+            <article class="post card item">
+                <div id="post-header">
+                    <p id="post-title">正在加载标题...</p>
+                </div>
+                <div id="post-content">
+                    <p>正在加载...</p>
+                    <script>
+                        $(document).ready(function () {
+                            SharpIce.post.Render("index");
+                        });
+                    </script>
+                </div>
+            </article>
+            <footer id="BottomBar" class="item card">
+                <p class="Title">
+                    ©
+                    <a href="https://sharpice.top/">SharpIce</a>
+                    2023
+                </p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

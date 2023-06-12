@@ -1,0 +1,34 @@
+vl {
+    min-width: 1px;
+    height: 80%;
+    position: relative;
+}
+
+vl::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    background-color: white;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.ButtonStyle {
+    margin: 0 0.5rem;
+    background-color: rgb(20, 20, 20);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.ButtonStyle:hover {
+    background-color: transparent;
+}
+
+.Icon {
+    margin-right: 3px;
+}

@@ -1,0 +1,13 @@
+* {
+    font-family: 'Roboto Serif', 'Noto Serif SC', sans-serif, system-ui, -apple-system, Ubuntu;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+
+body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: black;
+    overflow: auto;
+}
