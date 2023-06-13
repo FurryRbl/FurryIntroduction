@@ -1,0 +1,30 @@
+@media screen and (max-width: 800px) {
+    #NavigationBar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #NavigationBar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #NavigationBar a {
+        margin: 0.5rem;
+    }
+
+    #Main {
+        flex-direction: column;
+    }
+
+    #Main .SiteContentInfo,
+    #Main .LeftBar {
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #Content #Main {
+        width: 100%;
+    }
+}

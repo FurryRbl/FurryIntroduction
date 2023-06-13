@@ -1,0 +1,10 @@
+#DiaLog .ErrorContent {
+    all:unset;
+    display: block;
+    font-size: 0.9em;
+    text-align: left;
+    background-color: hsl(200, 20%, 20%);
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: auto;
+}

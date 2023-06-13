@@ -21,5 +21,16 @@ const SharpIce = {
                 }
             });
         }
+    },
+    DiaLog: {
+        Error: (ErrorMessage) => {
+            Swal.fire({
+                icon: 'error',
+                title: '出错啦Xwx',
+                html: ErrorMessage,
+                heightAuto: false,
+                confirmButtonText: "确定",
+            });
+        }
     }
 }

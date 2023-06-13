@@ -1,14 +1,16 @@
-#post-content h2 {
+#post-content h2, #post-content h3 {
     position: relative;
     padding-left: 1rem;
 }
 
-#post-content h2::after {
+#post-content h2::after, #post-content h3::after {
     content: "";
     width: 0.2em;
-    height: 100%;
+    height: 80%;
     position: absolute;
     left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 1em;
     background-color: rgba(0, 255, 255, 60%);
 }
@@ -18,9 +20,18 @@
     display: block;
     width: 100%;
     height: 1px;
-    background-color: rgba(128, 128, 128, 50%);
+    background-color: var(--LineColor);
 }
 
 #post-content a {
     color: rgb(0, 200, 255)
+}
+
+#post-content img {
+    display: block;
+    margin: 0 auto;
+}
+
+#post-content .ImportantColor::after {
+    background-color: rgba(255, 0, 0, 0.6);
 }

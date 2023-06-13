@@ -1,3 +1,11 @@
+:root {
+    --LineColor: rgba(128, 128, 128, 50%);
+}
+
+script {
+    margin: none;
+}
+
 vl {
     min-width: 1px;
     height: 80%;

@@ -2,15 +2,16 @@
 <html lang="zh">
 
 <head>
-    <title>Furry 介绍 | 主页</title>
+    <title>Furry 介绍 | 文章</title>
     <base target="_blank">
-    <meta name="description" content="Furry 介绍 - 主页" />
+    <meta name="description" content="Furry 介绍 - 文章" />
     <meta name="keywords" content="Furry" />
     <meta name="copyright" content="SharpIce © ALL">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="//cdn.staticfile.org" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//mzh.moegirl.org.cn" />
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="lib/sweetalert2/dark-theme/dark.css">
@@ -20,11 +21,11 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC">
     <link rel="stylesheet" type="text/css" href="css/Global.css">
+    <link rel="stylesheet" type="text/css" href="css/SharpIce.css">
     <link rel="stylesheet" type="text/css" href="css/DiaLog.css">
     <link rel="stylesheet" type="text/css" href="css/post.css">
-    <link rel="stylesheet" type="text/css" href="css/SharpIce.css">
     <link rel="stylesheet" type="text/css" href="css/Layout/All/NavigationBar.css">
-    <link rel="stylesheet" type="text/css" href="css/Layout/Home/Main.css">
+    <link rel="stylesheet" type="text/css" href="css/Layout/post/Content.css">
     <link rel="stylesheet" type="text/css" href="css/Layout/All/BottomBar.css">
     <link rel="stylesheet" type="text/css" href="css/Media.css">
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js" module></script>
@@ -69,36 +70,42 @@
             </a>
         </nav>
     </header>
-    <div id="post-content">
-        <main id="Main" class="card">
-            <article class="SiteContentInfo">
-                <h2>网站内容介绍</h2>
-                <p>此网站是为不了解 Furry 文化的朋友们做相关科普而创建的网站。</p>
-                <p>相关资料来源于互联网，大多数是由社区无私奉献的资料。</p>
-                <h2>相关 Tag</h2>
-                <p>
-                    <i class="fa fa-tags"></i>
-                    <a href="https://zh.wikifur.com/wiki/Furry">Furry</a>
-                    <a href="https://zh.wikifur.com/wiki/兽人">兽人</a>
-                </p>
+    <div id="Content">
+        <main id="Main">
+            <article class="post card item">
+                <div id="post-header">
+                    <p id="post-title">所有文章</p>
+                </div>
+                <div id="post-content">
+                    <a href="?name=FurryWikiMegirlWiki">
+                        <h2>Furry Wiki - 萌娘百科</h2>
+                    </a>
+                </div>
             </article>
-            <aside class="LeftBar card">
-                <p class="Title">相关文章（站内）</p>
-                <ul>
-                    <li>
-                        <a href="/post.html?name=FurrymMegirlWiki">Furry 萌娘百科</a>
-                    </li>
-                </ul>
-            </aside>
+            <footer id="BottomBar" class="item card">
+                <p class="Title">
+                    ©
+                    <a href="https://sharpice.top/">SharpIce</a>
+                    2023
+                </p>
+            </footer>
         </main>
-        <footer id="BottomBar" class="item card" style="margin: 0 auto; width: 80%;">
-            <p class="Title">
-                ©
-                <a href="https://sharpice.top/">SharpIce</a>
-                2023
-            </p>
-        </footer>
     </div>
 </body>
+
+<script style="margin: none;">
+    $(document).ready(function () {
+        var postName = new URLSearchParams(window.location.search).get("name") // 获取 HTML参数：name
+        if (postName != undefined) { // 怕判断是否为空
+            $.ajax({ // 判断是否有文章
+                type: 'get',
+                url: `post/${postName}/post.md`,
+                success: function () {
+                    SharpIce.post.Render(postName); // 渲染文章
+                }
+            })
+        }
+    });
+</script>
 
 </html>
