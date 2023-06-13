@@ -1,0 +1,35 @@
+#Content {
+    background-color: hsl(200, 50%,10%);
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+#Content #post-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#Content .Links {
+    border: 1px solid var(--LineColor);
+    padding: 2rem 1.5rem;
+    width: 10rem;
+    height: 5rem;
+    margin: 2rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Content .Links i {
+    width: 100%;
+    min-height: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Content .Links p {
+    font-size: 1.2em;
+}

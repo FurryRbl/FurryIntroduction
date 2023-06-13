@@ -24,6 +24,7 @@ vl::before {
 
 .card {
     border-radius: 10px;
+    animation: card-excessive .25s ease-out;
 }
 
 .ButtonStyle {

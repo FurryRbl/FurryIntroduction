@@ -1,0 +1,17 @@
+#Content {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+#Content #post-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+#Content .post {
+    border: 1px solid var(--LineColor);
+    padding: 2rem 1.5rem;
+    max-width: 25%;
+    margin: 2rem;
+}

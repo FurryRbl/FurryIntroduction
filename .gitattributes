@@ -1,2 +1,3 @@
 *.ico filter=lzma2
 *.webp filter=lzma2
+*.png filter=lzma2
