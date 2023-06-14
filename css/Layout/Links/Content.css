@@ -1,8 +1,8 @@
 #Content {
-    background-color: hsl(200, 50%,10%);
+    background-color: #333399;
     padding: 2rem 1.5rem;
     margin: 1rem 0;
-    width: 100%;
+    width: calc(100% - 3rem);
 }
 
 #Content #post-content {
@@ -32,4 +32,12 @@
 
 #Content .Links p {
     font-size: 1.2em;
+}
+
+@media screen and (max-width: 800px) {
+    #Content #post-content {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
 }

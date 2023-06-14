@@ -1,0 +1,28 @@
+#Content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#Content #Main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#Content #Main .post {
+    background-color: #3366CC;
+    padding: 2rem 1.5rem;
+}
+
+#Content #Main .item {
+    margin: 1rem 0;
+}
+
+#Content #Main #post-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}

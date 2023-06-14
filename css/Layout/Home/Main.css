@@ -17,11 +17,13 @@
 #Main .LeftBar {
     border: 1px solid var(--LineColor);
     width: 15%;
+    display: flex;
+    flex-direction: column;
 }
 
 #Main .LeftBar .Title {
     display: flex;
-    height: 20%;
+    height: 5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
@@ -29,4 +31,24 @@
     margin: unset;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
+}
+
+#Main li {
+    margin: 0.5rem auto;
+}
+
+@media screen and (max-width: 800px) {
+    #Main {
+        flex-direction: column;
+    }
+
+    #Main .SiteContentInfo,
+    #Main .LeftBar {
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #Content #Main {
+        width: 100%;
+    }
 }

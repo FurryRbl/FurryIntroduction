@@ -12,6 +12,7 @@ body {
     overflow: auto;
 }
 
-img {
+img,
+a {
     user-select: none;
 }

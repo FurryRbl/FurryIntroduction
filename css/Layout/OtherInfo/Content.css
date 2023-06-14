@@ -1,7 +1,6 @@
 #Content {
     padding: 2rem 1.5rem;
     margin: 1rem 0;
-    width: 100%;
 }
 
 #Content #post-content {
@@ -14,4 +13,16 @@
     padding: 2rem 1.5rem;
     max-width: 25%;
     margin: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+    #Content #post-content {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+    #Content .post {
+        max-width: unset;
+        width: 100%;
+    }
 }

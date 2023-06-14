@@ -20,3 +20,20 @@
 #NavigationBar .Title span {
     font-size: 0.5em;
 }
+
+@media screen and (max-width: 800px) {
+    #NavigationBar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #NavigationBar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #NavigationBar a {
+        margin: 0.5rem;
+    }
+}

@@ -24,12 +24,14 @@
 }
 
 #post-content a {
-    color: rgb(0, 200, 255)
+    color: rgb(0, 200, 255);
+    word-wrap: break-word;
 }
 
 #post-content img {
     display: block;
     margin: 0 auto;
+    width: 50%;
 }
 
 #post-content .ImportantColor::after {

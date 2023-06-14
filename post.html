@@ -28,7 +28,6 @@
     <link rel="stylesheet" type="text/css" href="css/Layout/All/NavigationBar.css">
     <link rel="stylesheet" type="text/css" href="css/Layout/post/Content.css">
     <link rel="stylesheet" type="text/css" href="css/Layout/All/BottomBar.css">
-    <link rel="stylesheet" type="text/css" href="css/Media.css">
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js" module></script>
     <script type="text/javascript" src="https://cdn.staticfile.org/sweetalert2/11.7.12/sweetalert2.all.min.js"
         module></script>
@@ -65,7 +64,7 @@
                 <i class="fa fa-link"></i>
                 外部链接
             </a>
-            <a class="ButtonStyle" href="#">
+            <a class="ButtonStyle" href="/about.html">
                 <i class="Icon fa-solid fa-heart"></i>
                 关于
             </a>
@@ -81,6 +80,12 @@
                     <a href="?name=FurryWikiMegirlWiki">
                         <h2>Furry Wiki - 萌娘百科</h2>
                     </a>
+                    <a href="?name=兽展">
+                        <h2>兽展</h2>
+                    </a>
+                    <a href="?name=兽装">
+                        <h2>兽装</h2>
+                    </a>
                 </div>
             </article>
             <footer id="BottomBar" class="item card">
@@ -95,8 +100,8 @@
 </body>
 
 <script style="margin: none;">
-    var postName = new URLSearchParams(window.location.search).get("name") // 获取 HTML参数：name
-    if (postName != undefined) { // 怕判断是否为空
+    var postName = new URLSearchParams(window.location.search).get("name"); // 获取 HTML参数：name
+    if (postName != undefined) { // 判断是否为空
         $.ajax({ // 判断是否有文章
             type: 'get',
             url: `post/${postName}/post.md`,
